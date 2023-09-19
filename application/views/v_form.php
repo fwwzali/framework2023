@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <form method="post" action="<?php echo base_url('index.php/mahasiswa/form') ?>">
+    <h3><?php echo $judul; ?></h3>
+    <form method="post" action="<?php echo base_url('index.php/mahasiswa/insert') ?>">
         <table>
             <tr>
                 <td>NRP </td>
