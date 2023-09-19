@@ -8,7 +8,11 @@
 </head>
 
 <body>
-    <table>
+    <h3><?php echo $judul; ?></h3>
+    <a href="<?php echo base_url('index.php/mahasiswa/form') ?>">
+        TAMBAH DATA
+    </a>
+    <table border="1">
         <thead>
             <tr>
                 <td>NPM</td>

@@ -12,6 +12,7 @@ class Mahasiswa extends CI_Controller
     function index()
     {
         //ambil data dari model
+        $data['judul'] = "Data Mahasiswa";
         $data['mhs'] = $this->MahasiswaModel->get_mahasiswa();
         //ambil template tampilan dari view
         $this->load->view('v_mahasiswa', $data);
