@@ -19,4 +19,11 @@ class MahasiswaModel extends CI_Model
         $sql = "INSERT INTO mhs VALUES (?,?,?,?)";
         $this->db->query($sql, array($data['nrp'], $data['nama'], $data['jenis_kelamin'], $data['alamat']));
     }
+
+    function get_one($nrp)
+    {
+        $sql = "SELECT * FROM mhs WHERE nrp = ?";
+        $data = $this->db->query($sql, array($nrp));
+        return $data->result();
+    }
 }

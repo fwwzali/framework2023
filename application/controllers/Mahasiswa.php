@@ -32,10 +32,12 @@ class Mahasiswa extends CI_Controller
         }
     }
 
-    public function update()
+    public function update($nrp)
     {
         if ($this->input->post()) {
         } else {
+            $data['judul'] = "UPDATE DATA MAHASISWA";
+            $data['mahasiswa'] = $this->MahasiswaModel->get_one($nrp);
         }
     }
 }
