@@ -32,6 +32,9 @@ class Mahasiswa extends CI_Controller
             //exit;
             $this->MahasiswaModel->insert_mahasiswa($data_input_user);
             redirect('mahasiswa/index');
+        } else {
+            $data['judul'] = "INPUT DATA MAHASISWA";
+            $this->load->view('v_form', $data);
         }
     }
 }
