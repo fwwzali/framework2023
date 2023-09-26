@@ -26,4 +26,12 @@ class MahasiswaModel extends CI_Model
         $data = $this->db->query($sql, array($nrp));
         return $data->result();
     }
+
+    function update($data)
+    {
+        $sql = "UPDATE mhs 
+                SET nama = ?, jenis_kelamin = ?, alamat = ? 
+                WHERE nrp = ?";
+        $this->db->query($sql, array($data['nama'], $data['jenis_kelamin'], $data['alamat'], $data['nrp']));
+    }
 }
