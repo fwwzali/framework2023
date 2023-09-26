@@ -19,6 +19,7 @@
                 <td>NAMA</td>
                 <td>JENIS KELAMIN</td>
                 <td>ALAMAT</td>
+                <td>ACTION</td>
             </tr>
         </thead>
         <tbody>
@@ -28,6 +29,9 @@
                     <td><?php echo $data->nama; ?></td>
                     <td><?php echo $data->jenis_kelamin; ?></td>
                     <td><?php echo $data->alamat; ?></td>
+                    <td>
+                        <a href="<?php echo base_url('index.php/mahasiswa/update/' . $data->nrp); ?>">UPDATE</a>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

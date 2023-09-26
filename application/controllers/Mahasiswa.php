@@ -18,12 +18,6 @@ class Mahasiswa extends CI_Controller
         $this->load->view('v_mahasiswa', $data);
     }
 
-    function form()
-    {
-        $data['judul'] = "INPUT DATA MAHASISWA";
-        $this->load->view('v_form', $data);
-    }
-
     function insert()
     {
         if ($this->input->post()) {
@@ -35,6 +29,13 @@ class Mahasiswa extends CI_Controller
         } else {
             $data['judul'] = "INPUT DATA MAHASISWA";
             $this->load->view('v_form', $data);
+        }
+    }
+
+    public function update()
+    {
+        if ($this->input->post()) {
+        } else {
         }
     }
 }
