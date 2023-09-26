@@ -31,6 +31,8 @@
                     <td><?php echo $data->alamat; ?></td>
                     <td>
                         <a href="<?php echo base_url('index.php/mahasiswa/update/' . $data->nrp); ?>">UPDATE</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="<?php echo base_url('index.php/mahasiswa/delete/' . $data->nrp); ?>">DELETE</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

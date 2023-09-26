@@ -45,4 +45,10 @@ class Mahasiswa extends CI_Controller
             $this->load->view('v_update', $data);
         }
     }
+
+    function delete($nrp)
+    {
+        $this->MahasiswaModel->delete($nrp);
+        redirect('mahasiswa');
+    }
 }
