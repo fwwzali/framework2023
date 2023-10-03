@@ -9,9 +9,15 @@ class MahasiswaModel extends CI_Model
 
     function get_mahasiswa()
     {
-        $sql = "SELECT * FROM mhs";
-        $data = $this->db->query($sql);
-        return $data->result();
+        //pakai RAW SQL
+        //---------------
+        // $sql = "SELECT * FROM mhs";
+        // $data = $this->db->query($sql);
+        // return $data->result();
+
+        //pakai Query Builder
+        return $this->db->get('mhs')->result();
+        // SELECT * FROM mhs
     }
 
     function insert_mahasiswa($data)
