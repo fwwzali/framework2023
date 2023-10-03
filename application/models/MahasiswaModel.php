@@ -37,9 +37,13 @@ class MahasiswaModel extends CI_Model
 
     function get_one($nrp)
     {
-        $sql = "SELECT * FROM mhs WHERE nrp = ?";
-        $data = $this->db->query($sql, array($nrp));
-        return $data->result();
+        // $sql = "SELECT * FROM mhs WHERE nrp = ?";
+        // $data = $this->db->query($sql, array($nrp));
+        // return $data->result();
+
+        //return $this->db->get_where('mhs', array('nrp' => $nrp))->result();
+        $this->db->where('nrp', $nrp);
+        return $this->db->get('mhs')->result();
     }
 
     function update($data)
