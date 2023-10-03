@@ -65,7 +65,10 @@ class MahasiswaModel extends CI_Model
 
     function delete($nrp)
     {
-        $sql = "DELETE FROM mhs WHERE nrp = ?";
-        $this->db->query($sql, array($nrp));
+        // $sql = "DELETE FROM mhs WHERE nrp = ?";
+        // $this->db->query($sql, array($nrp));
+
+        $this->db->where('nrp', $nrp);
+        $this->db->delete('mhs');
     }
 }
