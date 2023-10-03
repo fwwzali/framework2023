@@ -9,7 +9,7 @@
 
 <body>
     <h3><?php echo $judul; ?></h3>
-    <a href="<?php echo base_url('index.php/mahasiswa/form') ?>">
+    <a href="<?php echo base_url('index.php/mahasiswa/insert') ?>">
         TAMBAH DATA
     </a>
     <table border="1">

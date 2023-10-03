@@ -22,8 +22,17 @@ class MahasiswaModel extends CI_Model
 
     function insert_mahasiswa($data)
     {
-        $sql = "INSERT INTO mhs VALUES (?,?,?,?)";
-        $this->db->query($sql, array($data['nrp'], $data['nama'], $data['jenis_kelamin'], $data['alamat']));
+        //$sql = "INSERT INTO mhs VALUES (?,?,?,?)";
+        //$this->db->query($sql, array($data['nrp'], $data['nama'], $data['jenis_kelamin'], $data['alamat']));
+
+        $insert_data = array(
+            'nrp' => $data['nrp'],
+            'nama' => $data['nama'],
+            'jenis_kelamin' => $data['jenis_kelamin'],
+            'alamat' => $data['alamat']
+        );
+
+        $this->db->insert('mhs', $insert_data);
     }
 
     function get_one($nrp)
