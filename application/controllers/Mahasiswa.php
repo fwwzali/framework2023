@@ -22,9 +22,22 @@ class Mahasiswa extends CI_Controller
     {
         if ($this->input->post()) {
             $data_input_user = $this->input->post();
-            //print_r($data_input_user);
-            //exit;
-            $this->MahasiswaModel->insert_mahasiswa($data_input_user);
+            $result = $this->MahasiswaModel->insert_mahasiswa($data_input_user);
+
+            if ($result > 0) {
+                //sukses
+                $this->session->set_flashdata('msg', '<div class="alert alert-success" role="alert">
+                Success! Data berhasil disimpan
+              </div>
+              ');
+            } else {
+                //err
+                $this->session->set_flashdata('msg', '<div class="alert alert-danger" role="alert">
+                Error! Data gagal disimpan
+              </div>
+              ');
+            }
+
             redirect('mahasiswa/index');
         } else {
             $data['judul'] = "INPUT DATA MAHASISWA";

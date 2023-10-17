@@ -386,6 +386,7 @@
 
 
                 <h2><?php echo $judul; ?></h2>
+                <?php echo $this->session->flashdata('msg'); ?>
                 <a class="btn btn-success" href="<?php echo base_url('mahasiswa/insert') ?>">
                     TAMBAH DATA
                 </a>

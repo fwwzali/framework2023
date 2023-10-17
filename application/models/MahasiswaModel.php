@@ -33,6 +33,7 @@ class MahasiswaModel extends CI_Model
         );
 
         $this->db->insert('mhs', $insert_data);
+        return $this->db->affected_rows();
     }
 
     function get_one($nrp)
