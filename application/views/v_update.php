@@ -9,7 +9,7 @@
 
 <body>
     <h3><?php echo $judul; ?></h3>
-    <form method="post" action="<?php echo base_url('index.php/mahasiswa/update') ?>">
+    <form method="post" action="<?php echo base_url('mahasiswa/update') ?>">
         <?php foreach ($mahasiswa as $mhs) : ?>
             <table>
                 <tr>

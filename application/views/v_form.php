@@ -9,7 +9,7 @@
 
 <body>
     <h3><?php echo $judul; ?></h3>
-    <form method="post" action="<?php echo base_url('index.php/mahasiswa/insert') ?>">
+    <form method="post" action="<?php echo base_url('mahasiswa/insert') ?>">
         <table>
             <tr>
                 <td>NRP </td>

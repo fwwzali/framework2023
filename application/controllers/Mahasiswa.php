@@ -15,7 +15,7 @@ class Mahasiswa extends CI_Controller
         $data['judul'] = "Data Mahasiswa";
         $data['mhs'] = $this->MahasiswaModel->get_mahasiswa();
         //ambil template tampilan dari view
-        $this->load->view('v_mahasiswa', $data);
+        $this->load->view('mahasiswa/v_mahasiswa', $data);
     }
 
     function insert()
