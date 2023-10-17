@@ -264,11 +264,11 @@
                     <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
                         <ul class="nav flex-column">
                             <li class="nav-item">
-                                <a class="nav-link d-flex align-items-center gap-2 active" aria-current="page" href="#">
+                                <a class="nav-link d-flex align-items-center gap-2 <?php echo $this->uri->segment(1) == 'mahasiswa' ? 'active' : ''  ?>" aria-current="page" href="<?php echo base_url('mahasiswa') ?>">
                                     <svg class="bi">
                                         <use xlink:href="#house-fill"></use>
                                     </svg>
-                                    Dashboard
+                                    Mahasiswa
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -405,9 +405,9 @@
                             <?php foreach ($mhs as $data) : ?>
                                 <tr>
                                     <td><?php echo $data->nrp; ?></td>
-                                    <td><?php echo $data->nama; ?></td>
-                                    <td><?php echo $data->jenis_kelamin; ?></td>
-                                    <td><?php echo $data->alamat; ?></td>
+                                    <td><?php echo kapital($data->nama); ?></td>
+                                    <td><?php echo kapital(jenis_kelamin($data->jenis_kelamin)); ?></td>
+                                    <td><?php echo kapital($data->alamat); ?></td>
                                     <td>
                                         <a class="btn btn-warning btn-sm" href="<?php echo base_url('mahasiswa/update/' . $data->nrp); ?>">UPDATE</a>
                                         &nbsp;&nbsp;&nbsp;

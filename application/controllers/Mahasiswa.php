@@ -6,6 +6,7 @@ class Mahasiswa extends CI_Controller
     {
         parent::__construct();
         $this->load->model('MahasiswaModel');
+        //$this->load->helper('myweb');
     }
 
     //menampilkan data mahasiswa
